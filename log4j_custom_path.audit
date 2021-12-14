@@ -1,0 +1,12 @@
+<check_type:"Unix">
+
+<custom_item>
+ system			         : "Linux"
+ type			         : CMD_EXEC
+ description                     : "Custom Asset Discovery log4j"
+ info                            : "Custom Asset Discovery log4j-core jar file in /appl. More customer path can be added by modifying below cmd"
+ cmd			         : "for bar in \`timeout 30s find \/appl -maxdepth 10 -type f -size -10M -name log4j-core-*.jar 2>/dev/null\`; do echo $bar 2>&1; done"
+ expect		         : ""
+</custom_item>
+
+</check_type>
